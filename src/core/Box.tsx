@@ -1,10 +1,9 @@
 import * as React from 'react';
-import LinearGradient, {
-  LinearGradientProps,
-} from 'react-native-linear-gradient';
+import { View, ViewProps } from 'react-native';
 import {
   styleFlexBox,
   StyleFlexBoxProps,
+  styles,
   styleSpace,
   StyleSpaceProps,
   styleShadow,
@@ -15,18 +14,23 @@ import {
   StyleSizeProps,
   StyleShadowProps,
   StyleBorderProps,
-} from './helpers';
+} from '../helpers';
 
-interface GradientProps
+interface BoxProps
   extends StyleSpaceProps,
     StyleFlexBoxProps,
     StyleSizeProps,
     StyleBorderProps,
     StyleShadowProps,
     StylePositionProps,
-    LinearGradientProps {}
+    ViewProps {
+  circle?: boolean;
+  bg?: string;
+  // @ts-ignore
+  as?: any;
+}
 
-const Gradient: React.FC<GradientProps> = ({ style, ...props }) => {
+const Box: React.FC<BoxProps> = ({ circle, style, bg, as, ...props }) => {
   const blockStyles = [
     [...styleSpace(props)],
     [...styleFlexBox(props)],
@@ -34,10 +38,12 @@ const Gradient: React.FC<GradientProps> = ({ style, ...props }) => {
     [...styleShadow(props)],
     [...styleSize(props)],
     [...styleBorder(props)],
+    bg && { backgroundColor: bg },
+    circle && styles.circle,
     style,
   ];
   return React.createElement(
-    LinearGradient,
+    as,
     {
       style: blockStyles,
       ...props,
@@ -46,4 +52,8 @@ const Gradient: React.FC<GradientProps> = ({ style, ...props }) => {
   );
 };
 
-export default Gradient;
+Box.defaultProps = {
+  as: View,
+};
+
+export default Box;

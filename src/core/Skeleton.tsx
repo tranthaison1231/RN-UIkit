@@ -10,7 +10,7 @@ import {
   StyleSizeProps,
   styleSpace,
   StyleSpaceProps,
-} from './helpers';
+} from '../helpers';
 
 interface SkeletonProps
   extends StyleSpaceProps,

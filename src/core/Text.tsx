@@ -6,7 +6,7 @@ import {
   styles,
   styleSpace,
   StyleSpaceProps,
-} from './helpers';
+} from '../helpers';
 
 interface TextType extends StyleSpaceProps, StyleFlexBoxProps, TextProps {
   bg?: string;

@@ -9,7 +9,7 @@ import {
   StyleBorderProps,
   StyleShadowProps,
   styleShadow,
-} from './helpers';
+} from '../helpers';
 
 export type ButtonProps = React.ComponentProps<typeof PaperButton> &
   StyleSpaceProps &
@@ -17,7 +17,7 @@ export type ButtonProps = React.ComponentProps<typeof PaperButton> &
   StyleBorderProps &
   StyleShadowProps;
 
-const Button: React.FC<ButtonProps> = (props) => {
+const Button: React.FC<ButtonProps> = props => {
   const style = [
     [...styleSpace(props)],
     [...styleBorder(props)],

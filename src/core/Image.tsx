@@ -9,7 +9,7 @@ import {
   StyleFlexBoxProps,
   StyleShadowProps,
   StyleSizeProps,
-} from './helpers';
+} from '../helpers';
 
 interface Props
   extends ImageProps,

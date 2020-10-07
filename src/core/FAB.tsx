@@ -11,7 +11,7 @@ import {
   styleShadow,
   stylePosition,
   StylePositionProps,
-} from './helpers';
+} from '../helpers';
 
 export type FABProps = React.ComponentProps<typeof PaperFAB> &
   StyleSpaceProps &

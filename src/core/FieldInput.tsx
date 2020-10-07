@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Controller, ValidationRules } from 'react-hook-form';
 import { TextInput, HelperText } from 'react-native-paper';
-import { styleSpace, StyleSpaceProps } from './helpers';
+import { styleSpace, StyleSpaceProps } from '../helpers';
 import { TextInputProps, View } from 'react-native';
 import { useTheme } from 'react-native-paper';
 
@@ -42,7 +42,7 @@ const FieldInput: React.FC<FieldInputProps> = ({
           required: required && `${label} is required`,
           ...rules,
         }}
-        render={(inputProps) => {
+        render={inputProps => {
           return (
             <TextInput
               // @ts-ignore
@@ -52,7 +52,7 @@ const FieldInput: React.FC<FieldInputProps> = ({
               error={form.errors[name]}
               label={label}
               mode={mode}
-              onChangeText={(value) => {
+              onChangeText={value => {
                 inputProps.onChange(value);
                 form.trigger(name);
               }}
