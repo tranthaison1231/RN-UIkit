@@ -9,6 +9,7 @@ export { default as FadeIn } from './FadeIn';
 export { default as FAB } from './FAB';
 export { default as Button } from './Button';
 export { default as Image } from './Image';
+export { default as AddButton } from './AddButton';
 // export { default as Navbar } from './Navbar';
 // export { default as SpeedDial } from './SpeedDial';
 export { default as StarRating } from './StarRating';

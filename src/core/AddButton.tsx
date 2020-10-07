@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Box from './Box';
 
 interface Props {
-  onPress: (event: GestureResponderEvent) => void;
+  onPress?: (event: GestureResponderEvent) => void;
 }
 
 const AddButton: React.FC<Props> = ({ onPress }) => {
@@ -17,6 +17,7 @@ const AddButton: React.FC<Props> = ({ onPress }) => {
       mx={30}
       top={-20}
       as={TouchableOpacity}
+      // @ts-ignore
       onPress={onPress}
       shadow={5}
     >
