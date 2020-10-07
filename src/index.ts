@@ -9,4 +9,4 @@ export { default as FadeIn } from './core/FadeIn';
 export { default as FAB } from './core/FAB';
 export { default as Button } from './core/Button';
 export { default as Image } from './core/Image';
-export * as from './hooks'
+export * as hooks from './hooks'
